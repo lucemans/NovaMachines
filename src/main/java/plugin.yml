@@ -1,0 +1,7 @@
+main: nl.lucemans.machines.NovaMachines
+name: NovaMachines
+description: NovaMachines
+depends: ["lucemanscore"]
+commands:
+  foo:
+   description: Foo command
