@@ -45,7 +45,7 @@
                             <relocations>
                                 <relocation>
                                     <pattern>nl.lucemans.NovaItems</pattern>
-                                    <shadedPattern>nl.shaded.NovaItems</shadedPattern>
+                                    <shadedPattern>nl.lucemans.NovaMachines.dependencies.NovaItems</shadedPattern>
                                 </relocation>
                             </relocations>
                         </configuration>
