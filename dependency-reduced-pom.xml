@@ -7,6 +7,10 @@
   <build>
     <plugins>
       <plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>2.4</version>
+      </plugin>
+      <plugin>
         <artifactId>maven-shade-plugin</artifactId>
         <version>2.4.3</version>
         <executions>
@@ -16,12 +20,11 @@
               <goal>shade</goal>
             </goals>
             <configuration>
-              <relocations>
-                <relocation>
-                  <pattern>nl.lucemans.NovaItems</pattern>
-                  <shadedPattern>nl.shaded.NovaItems</shadedPattern>
-                </relocation>
-              </relocations>
+              <artifactSet>
+                <excludes>
+                  <exclude>log4j:log4j:jar:</exclude>
+                </excludes>
+              </artifactSet>
             </configuration>
           </execution>
         </executions>
@@ -30,12 +33,16 @@
   </build>
   <repositories>
     <repository>
-      <id>spigot-repo</id>
-      <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
-    </repository>
-    <repository>
       <id>lucemans-repo</id>
       <url>https://repo.lucemans.nl/</url>
+    </repository>
+    <repository>
+      <id>wesjd-repo</id>
+      <url>https://nexus.wesjd.net/repository/thirdparty/</url>
+    </repository>
+    <repository>
+      <id>spigot-repo</id>
+      <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
     </repository>
   </repositories>
   <dependencies>
