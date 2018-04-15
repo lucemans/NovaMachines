@@ -1,5 +1,7 @@
-package nl.lucemans.machines;
+package nl.lucemans.NovaMachines;
 
+import nl.lucemans.NovaItems.NItem;
+import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.event.EventHandler;
@@ -14,6 +16,7 @@ public class NovaMachines extends JavaPlugin {
     @Override
     public void onEnable() {
         super.onEnable();
+        NItem.create(Material.GOLD_AXE).make();
     }
 
     @Override
