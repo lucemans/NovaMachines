@@ -4,5 +4,5 @@ description: NovaMachines
 depends: ["lucemanscore"]
 version: 1.1
 commands:
-  foo:
+  item:
    description: Foo command
